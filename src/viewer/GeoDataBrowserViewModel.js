@@ -251,17 +251,16 @@ var GeoDataBrowserViewModel = function(options) {
     this._activateNaturalEarthII = createCommand(function() {
         ga('send', 'event', 'mapSettings', 'switchImagery', 'Natural Earth II');
 
-        if (!defined(that._viewer.viewer)) {
-            var message = 'This imagery layer is not yet supported in 2D mode.';
-            alert(message);
-            return;
-              //This call works, but since the tiles are in graghic instead of spherical mercator only see western hemisphere
-//        this.mapBaseLayer = new L.tileLayer('http://cesiumjs.org/tilesets/imagery/naturalearthii/{z}/{x}/{y}.jpg', 
-//        {tms: true});
-        }
-        
         removeBaseLayer();
 
+        if (!defined(that._viewer.viewer)) {
+            that._viewer.mapBaseLayer = new L.tileLayer('http://nationalmap.nicta.com.au/imagery/NaturalEarthII/{z}/{x}/{y}.png',  {
+                tms: true
+            });
+            that._viewer.map.addLayer(that._viewer.mapBaseLayer);
+            return;
+        }
+        
         var imageryLayers = that._viewer.scene.globe.imageryLayers;
         currentBaseLayers.push(imageryLayers.addImageryProvider(new TileMapServiceImageryProvider({
             url : '//cesiumjs.org/tilesets/imagery/naturalearthii',
