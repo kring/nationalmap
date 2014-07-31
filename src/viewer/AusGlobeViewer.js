@@ -528,9 +528,7 @@ AusGlobeViewer.prototype._createCesiumViewer = function(container) {
             url : '//dev.virtualearth.net',
             mapStyle : BingMapsStyle.AERIAL_WITH_LABELS
         }),*/
-        imageryProvider : new HereMapsImageryProvider({
-            proxy : corsProxy
-        }),
+        imageryProvider : new HereMapsImageryProvider(),
         terrainProvider : new CesiumTerrainProvider({
             url : '//cesiumjs.org/stk-terrain/tilesets/world/tiles'
         }),

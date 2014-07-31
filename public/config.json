@@ -1,6 +1,5 @@
 { "proxyDomains" : [
-        "gov.au",
-        "here.com"
+        "gov.au"
     ],
  "corsDomains" : [
         "research.nicta.com.au",
