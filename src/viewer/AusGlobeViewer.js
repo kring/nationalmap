@@ -68,6 +68,7 @@ var SearchWidget = require('./SearchWidget');
 var ServicesPanel = require('./ServicesPanel');
 var SharePanel = require('./SharePanel');
 var TitleWidget = require('./TitleWidget');
+var HereMapsImageryProvider = require('../HereMapsImageryProvider');
 
 //use our own bing maps key
 BingMapsApi.defaultKey = undefined;
@@ -523,9 +524,12 @@ AusGlobeViewer.prototype._createCesiumViewer = function(container) {
         baseLayerPicker: false,
         navigationHelpButton: false,
         fullscreenButton : false,
-        imageryProvider : new BingMapsImageryProvider({
+        /*imageryProvider : new BingMapsImageryProvider({
             url : '//dev.virtualearth.net',
             mapStyle : BingMapsStyle.AERIAL_WITH_LABELS
+        }),*/
+        imageryProvider : new HereMapsImageryProvider({
+            proxy : corsProxy
         }),
         terrainProvider : new CesiumTerrainProvider({
             url : '//cesiumjs.org/stk-terrain/tilesets/world/tiles'
