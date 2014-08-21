@@ -334,10 +334,38 @@
     ]}
   ]},
   {
-    "name": "Victorian Government",
-    "type": "CKAN",
-    "base_url": "http://www.data.vic.gov.au/data",
-    "Layer": []
+    "name": "Tasmanian Government",
+    "Layer": [
+        {
+            "name": "Default",
+            "Layer": [
+                {
+                    "Name": "0",
+                    "Title": "Topographic Basemap",
+                    "type": "WMS",
+                    "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Basemaps/Topographic/ImageServer/WMSServer",
+                    "BoundingBox": {
+                        "west": 112.103285233514,
+                        "south": -47.51294355717528,
+                        "east": 155.22904341050855,
+                        "north": -4.849031608898621
+                    }
+                },
+                {
+                    "Name": "0",
+                    "Title": "Orthophoto Basemap",
+                    "type": "WMS",
+                    "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Basemaps/Orthophoto/ImageServer/WMSServer",
+                    "BoundingBox": {
+                        "west": 140.96713443713094,
+                        "south": -43.9939104830613,
+                        "east": 151.22787674070085,
+                        "north": -38.887011798925066
+                    }
+                }
+            ]
+        }
+    ]
   },
   { "name": "Data Providers", "Layer": [
     { "name": "Topography (Geoscience Australia)", "base_url": "http://geoserver.research.nicta.com.au/geotopo_250k/ows", "type": "WMS", "wfsAvailable": true,"description":"[Licence](http://www.ga.gov.au/copyright)" },
