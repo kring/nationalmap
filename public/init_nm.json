@@ -337,11 +337,11 @@
     "name": "Tasmanian Government",
     "Layer": [
         {
-            "name": "Default",
+            "name": "Base Maps",
             "Layer": [
                 {
                     "Name": "0",
-                    "Title": "Topographic Basemap",
+                    "Title": "Topographic",
                     "type": "WMS",
                     "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Basemaps/Topographic/ImageServer/WMSServer",
                     "BoundingBox": {
@@ -353,7 +353,7 @@
                 },
                 {
                     "Name": "0",
-                    "Title": "Orthophoto Basemap",
+                    "Title": "Orthophoto",
                     "type": "WMS",
                     "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Basemaps/Orthophoto/ImageServer/WMSServer",
                     "BoundingBox": {
@@ -364,6 +364,51 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "Emergency Management",
+            "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Public/EmergencyManagementPublic/MapServer/WMSServer",
+            "type": "WMS"
+        },
+        {
+            "name": "Flood Mapping",
+            "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Public/FloodMappingPublic/MapServer/WMSServer",
+            "type": "WMS"
+        },
+        {
+            "name": "Geological and Soils",
+            "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Public/GeologicalAndSoils/MapServer/WMSServer",
+            "type": "WMS"
+        },
+        {
+            "name": "Indexes",
+            "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Public/Indexes/MapServer/WMSServer",
+            "type": "WMS"
+        },
+        {
+            "name": "Marine and Coastal",
+            "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Public/MarineAndCoastal/MapServer/WMSServer",
+            "type": "WMS"
+        },
+        {
+            "name": "Natural Environment",
+            "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Public/NaturalEnvironment/MapServer/WMSServer",
+            "type": "WMS"
+        },
+        {
+            "name": "National Values Atlas",
+            "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Public/NVAdata/MapServer/WMSServer",
+            "type": "WMS"
+        },
+        {
+            "name": "Planning",
+            "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Public/Planning/MapServer/WMSServer",
+            "type": "WMS"
+        },
+        {
+            "name": "Topography and Relief",
+            "base_url": "http://services.thelist.tas.gov.au/arcgis/services/Public/TopographyAndRelief/MapServer/WMSServer",
+            "type": "WMS"
         }
     ]
   },
