@@ -262,15 +262,21 @@ function configureWebpack(terriaJSBasePath, config, devMode, hot, MiniCssExtract
                 {
                     loader: require.resolve('css-loader'),
                     options: {
-                        sourceMap: true,
+                        // sourceMap: true,
                         modules: true,
                         camelCase: true,
                         localIdentName: 'tjs-[name]__[local]',
                         importLoaders: 2
                     }
                 },
-                'resolve-url-loader?sourceMap',
-                'sass-loader?sourceMap'
+                {
+                    loader: "resolve-url-loader",
+                    options: {
+                        // sourceMap: true,
+                        removeCR: true
+                    }
+                },
+                'sass-loader'
             ]
         });
     } else if (MiniCssExtractPlugin) {
@@ -287,15 +293,21 @@ function configureWebpack(terriaJSBasePath, config, devMode, hot, MiniCssExtract
                 {
                     loader: require.resolve('css-loader'),
                     options: {
-                        sourceMap: true,
+                        // sourceMap: true,
                         modules: true,
                         camelCase: true,
                         localIdentName: 'tjs-[name]__[local]',
                         importLoaders: 2
                     }
                 },
-                'resolve-url-loader?sourceMap',
-                'sass-loader?sourceMap'
+                {
+                    loader: "resolve-url-loader",
+                    options: {
+                        // sourceMap: true,
+                        removeCR: true
+                    }
+                },
+                'sass-loader'
             ]
         });
 

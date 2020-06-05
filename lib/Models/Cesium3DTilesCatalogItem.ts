@@ -134,7 +134,9 @@ export default class Cesium3DTilesCatalogItem
       this.loadTileset();
     }
 
-    this.tileset.style = toJS(this.cesiumTileStyle);
+    if (this.cesiumTileStyle) {
+      this.tileset.style = toJS(this.cesiumTileStyle);
+    }
     this.tileset.shadows = this.cesiumShadows;
     this.tileset.show = this.show;
 
